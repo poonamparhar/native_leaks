@@ -1,0 +1,4 @@
+$JAVA_HOME/bin/javac JNINativeLeak.java
+$JAVA_HOME/bin/javah -jni JNINativeLeak
+g++ -fPIC -shared -I$JAVA_HOME/include -I$JAVA_HOME/include/linux JNINativeLeak.cpp -o libJNINativeLeak.so
+
